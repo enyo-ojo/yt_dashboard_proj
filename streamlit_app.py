@@ -39,10 +39,10 @@ def audience_sample(country):
 
 #load data:
 def loadData():
-    df_comments = pd.read_csv('/workspaces/enyo-ojo/stenv/csv-files/All_Comments_Final.csv')
-    df_vp_time = pd.read_csv('/workspaces/enyo-ojo/stenv/csv-files/Video_Performance_Over_Time.csv')
-    df_agg = pd.read_csv('/workspaces/enyo-ojo/stenv/csv-files/Aggregated_Metrics_By_Video.csv').iloc[1:,:]
-    df_agg_sub = pd.read_csv('/workspaces/enyo-ojo/stenv/csv-files/Aggregated_Metrics_By_Country_And_Subscriber_Status.csv')
+    df_comments = pd.read_csv('All_Comments_Final.csv')
+    df_vp_time = pd.read_csv('Video_Performance_Over_Time.csv')
+    df_agg = pd.read_csv('Aggregated_Metrics_By_Video.csv').iloc[1:,:]
+    df_agg_sub = pd.read_csv('Aggregated_Metrics_By_Country_And_Subscriber_Status.csv')
 
     #renaming the agg columns
     df_agg.columns = ['Video','Video title','Video publish time','Comments added','Shares','Dislikes','Likes',
